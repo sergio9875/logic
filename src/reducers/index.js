@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux';
-import posts from './postReducer';
+import users from './userReducer'
+import jobReducer from "./jobReducer";
 
 export default combineReducers({
-    posts: posts
+    jobs: jobReducer,
+    users: users,
+
 });

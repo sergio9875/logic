@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
-import CreatePost from './containers/CreatePost';
-import PostList from './containers/PostList';
+import React from  'react';
 
+import ChartContainer from "./containers/ChartContainer";
+import UserListContainer from "./containers/UserListContainer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import { ChartReact } from "./components/UserList"
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const stylesApp = {
-  marginTop: 40
+    marginTop: 40
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <div className="row" style={ stylesApp }>
-          <div className="col-md-6">
-            <CreatePost />
-          </div>
-          <div className="col-md-6">
-            <PostList />
-          </div>
-        </div>
-      </div>
-    );
-  }
+const App = () =>  {
+
+        return (
+            <div className="container">
+                <div className="row" style={stylesApp}>
+                    <div className="col-md-6">
+
+                        <UserListContainer/>
+                        {/*<ChartReact />*/}
+                    </div>
+                    <div className="col-md-6">
+                        <ChartContainer/>
+                    </div>
+                </div>
+            </div>
+        );
+
 }
 
-export default App;
+export default App
